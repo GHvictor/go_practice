@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go_code/design"
-	_ "go_code/leetcode"
+	"github.com/GHvictor/go_practice/design_pattern"
+	_ "github.com/GHvictor/go_practice/leetcode"
 	"math"
 	"reflect"
 )
@@ -104,10 +104,10 @@ func (i User) m2(){
 }
 
 func main() {
-	instance := design.GetInstance()
+	instance := design_pattern.GetInstance()
 	instance.Init()
 
-	f := design.Factory{}
+	f := design_pattern.Factory{}
 	a := f.Create("A")
 	a.Init()
 	fmt.Println(a.Print())
@@ -120,7 +120,7 @@ func main() {
 	bValue := reflect.ValueOf(b)
 	fmt.Println(bValue.Type())
 	fmt.Println(c)
-	ld := design.LogDecorator(design.Double)
+	ld := design_pattern.LogDecorator(design_pattern.Double)
 	fmt.Println(ld(44))
 
 }
