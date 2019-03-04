@@ -4,7 +4,7 @@ import (
 	"container/heap"
 	"container/list"
 	"fmt"
-	"github.com/GHvictor/go_practice/design"
+	"github.com/GHvictor/go_practice/design_pattern"
 	_ "github.com/GHvictor/go_practice/leetcode"
 	"math"
 	"reflect"
@@ -184,10 +184,10 @@ func main() {
 	for _, v := range dc {
 		fmt.Println(v)
 	}
-	instance := design.GetInstance()
+	instance := design_pattern.GetInstance()
 	instance.Init()
 
-	f := design.Factory{}
+	f := design_pattern.Factory{}
 	a := f.Create("A")
 	a.Init()
 	fmt.Println(a.Print())
@@ -200,7 +200,7 @@ func main() {
 	bValue := reflect.ValueOf(b)
 	fmt.Println(bValue.Type())
 	fmt.Println(c)
-	ld := design.LogDecorator(design.Double)
+	ld := design_pattern.LogDecorator(design_pattern.Double)
 	fmt.Println(ld(44))
 
 }
