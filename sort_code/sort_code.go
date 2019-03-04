@@ -15,7 +15,7 @@ func QuickSort(arr []int) {
 	if len(arr) < 1 {
 		return
 	}
-	mid, i:= arr[0], 0
+	mid, i := arr[0], 0
 	head, tail := 0, len(arr) - 1
 	flag := true
 	for head < tail {
