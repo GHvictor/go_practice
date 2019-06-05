@@ -19,7 +19,7 @@ func mergeKLists(lists []*ListNode) *ListNode {
 	}
 	sort.Ints(tmp_array)
 
-	var head *ListNode
+	head := &ListNode{0, nil}
 	h := head
 	for i := 0; i < len(tmp_array); i++ {
 		var new_list *ListNode
